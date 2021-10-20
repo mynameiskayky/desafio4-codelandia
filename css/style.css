@@ -1,0 +1,210 @@
+/* font-faces */
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('../fontes/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('../fontes/Lato-Bold.ttf');
+}
+@font-face {
+  font-family: 'Merriweather Regular';
+  src: url('../fontes/Merriweather-Regular.ttf');
+}
+
+/* Variáveis */
+
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* Container Left */
+
+.container-image {
+  background-color: var(--white300);
+}
+
+.container-image img {
+  max-width: 500px;
+  padding: 40px;
+}
+
+/* Container Right */
+
+.container-login {
+  display: grid;
+  place-items: center;
+  width: 50%;
+  padding: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 400px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.container-esqueceu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Login */
+
+.login {
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login p {
+  font-family: 'Merriweather Regular';
+  color: var(--dark);
+  font-size: 1.125em;
+}
+
+.login h1 {
+  font-family: 'Merriweather Regular';
+  font-size: 1.75em;
+  color: var(--dark);
+  font-weight: 700;
+  margin: 6px 0 28px;
+}
+
+.login label {
+  font-size: 1.125em;
+  font-family: 'Lato Regular';
+  color: #1a202c;
+  padding: 10px 0;
+}
+
+.login #email,
+.login #senha {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  max-width: 500px;
+  padding: 16px;
+  font-size: 1em;
+  font-family: 'Lato Regular';
+}
+
+.login button {
+  background: #04c45c;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Lato Regular';
+  font-size: 1.125em;
+  font-weight: 700;
+  font-style: normal;
+  padding: 9px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.login a.google {
+  margin-top: 15px;
+  background: #1a202c;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1.125em;
+  font-family: 'Lato Regular';
+  font-weight: 700;
+  padding: 9px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.login a.google:before {
+  content: url('../image/google.svg');
+  height: 24px;
+  width: 24px;
+  padding-right: 10px;
+}
+
+.container-esqueceu {
+  margin: 15px 0 30px;
+}
+
+.container-esqueceu a {
+  font-size: 1.125em;
+  font-family: 'Lato Regular';
+  color: #2b6cb0;
+}
+
+.cadastro p {
+  font-family: 'Lato Regular';
+  font-size: 1.125em;
+  text-align: center;
+  margin: 50px 0 0;
+}
+
+.cadastro a {
+  color: var(--blue);
+  margin-left: 4px;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .container-image {
+    display: none;
+  }
+
+  .container-login {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 85%;
+  }
+
+  .container-login {
+    padding: 0;
+  }
+}
